@@ -119,7 +119,9 @@ class TechDocsCore(BasePlugin):
         config["markdown_extensions"].append("plantuml_markdown")
         
         config["markdown_extensions"].append("mdx_truly_sane_lists")
-        config["markdown_extensions"]["mdx_truly_sane_lists"].append("nested_indent: 2")
+        config["markdown_extensions"]["mdx_truly_sane_lists"] = {
+            "nested_indent": 2,
+        }
 
         # merge config supplied by user in the mkdocs.yml
         for key in mdx_configs_override:
