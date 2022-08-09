@@ -120,7 +120,7 @@ class TechDocsCore(BasePlugin):
         
         config["markdown_extensions"].append("mdx_truly_sane_lists")
         config["mdx_configs"]["mdx_truly_sane_lists"] = {
-            "nested_indent": 3,
+            "nested_indent": 4,
         }
 
         # merge config supplied by user in the mkdocs.yml
